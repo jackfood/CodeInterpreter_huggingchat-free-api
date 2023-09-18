@@ -1,6 +1,6 @@
 ## Purpose of This Program
 
-The primary objective of this program is to automate the execution of code in response to input received from the Hugging Chat API (huggingchat). It is designed to intelligently parse chatbot responses, detect Python code blocks or `pip install` commands, and execute them seamlessly. This automation process makes it convenient for users without extensive coding experience to interact with the chatbot and execute code effortlessly.
+The primary objective of this program is to automate the execution of code (simulate as Code Interpreter) in response to input received from the Hugging Chat API (huggingchat). It is designed to intelligently parse chatbot responses, detect Python code blocks or `pip install` commands, and execute them seamlessly. This automation process makes it convenient for users without extensive coding experience to interact with the chatbot and execute code effortlessly.
 
 ### Key Features and Functionality
 
