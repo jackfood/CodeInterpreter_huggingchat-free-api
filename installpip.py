@@ -14,5 +14,3 @@ try:
     print(f"------------------------------ Successfully installed {package_name} ------------------------------")
 except subprocess.CalledProcessError as e:
     print(f"------------------------------ Failed to install {package_name}: {e} ------------------------------")
-
-os.remove("installpip.txt")
