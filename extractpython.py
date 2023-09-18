@@ -44,18 +44,17 @@ if ai_response is not None:
 
                 with open(aipythonanswer_path, 'w', encoding='utf-8') as python_file:
                     python_file.write(python_content)
-                print("------------------------------ Python content updated sucessfully ------------------------------")
             else:
-                print("------------------------------ Python content is the same as previous content extracted content. ------------------------------")
+                print("--Update: no Change in Code--")
         except FileNotFoundError:
             # If 'aipythonanswer.txt' doesn't exist, create it and save python_content to it
             with open(aipythonanswer_path, 'w', encoding='utf-8') as python_file:
                 python_file.write(python_content)
-            print("------------------------------Python content extracted sucessfully------------------------------")
+            print("--Python Code Extracted--")
     else:
-        print("------------------------------No Python code found from response------------------------------")
+        print("--No Python code--")
 else:
-    print("------------------------------No AI response------------------------------")
+    print("--No AI response--")
 
 
 # Function to extract code block between "```python" or "```"
