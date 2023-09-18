@@ -34,6 +34,7 @@ Before you can use this Half-CodeInterpreter, you'll need to set up your environ
 
 ### Prerequisites
 
+- a huggingface account (if not done yet, sign up for free)
 - Python 3.7 or higher
 - [Hugging Chat API](https://github.com/Soulter/hugging-chat-api) library
 
