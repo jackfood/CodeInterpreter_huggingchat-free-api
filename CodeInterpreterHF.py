@@ -17,6 +17,13 @@ python_script_path_installpy = 'installpip.py'
 current_directory = os.getcwd()
 prompt_file_path = os.path.join(current_directory, 'prompt.txt')
 pythoncode_path = os.path.join(current_directory, 'aipythonanswer.txt')
+prompt_guidance_path = os.path.join(current_directory, 'system_message.txt')
+prompt_inject_path = os.path.join(current_directory, '_temp.txt')
+
+with open(prompt_guidance_path, 'r', encoding='utf-8') as source_file:
+    content = source_file.read()
+with open(prompt_inject_path, 'a', encoding='utf-8') as target_file:
+    target_file.write(content)
 
 
 # Login to the chat service
@@ -38,6 +45,7 @@ while True:
     if os.path.exists(pythoncode_path):
         with open(pythoncode_path, 'w', encoding='utf-8') as file:
             file.write('')
+    
     if os.path.exists(prompt_file_path):
         with open(prompt_file_path, 'r', encoding='utf-8') as file:
             saved_input = file.read().strip()
@@ -45,7 +53,18 @@ while True:
                 user_input = saved_input
                 print(f"Existing Prompt - '{saved_input}', proceed to run")
             else:
-                user_input = input('> ')
+                if os.path.exists(prompt_inject_path):
+                    user_input = input('> ')
+                    with open(prompt_inject_path, 'r', encoding='utf-8') as file:
+                        saved_input = file.read().strip()
+                        if saved_input:
+                            user_input = saved_input + ' ' + user_input
+                        else:
+                            user_input = input('> ')
+                            # Append the user input to _temp.txt
+                            with open(prompt_inject_path, 'a', encoding='utf-8') as target_file:
+                                target_file.write(user_input + '\n')  # Append a newline
+
     if user_input.lower() == '':
         pass
     elif user_input.lower() in ['q', 'quit']:
