@@ -165,8 +165,8 @@ while True:
                     print("\n******  Code Ended (with Error) *****\n")
 
                      # record error in (_temp_prompt.txt)
-                    with open(temp_prompt_holding, 'w', encoding='utf-8') as file:
-                        file.write(error_response)
+                    with open(prompt_file_path, 'w', encoding='utf-8') as error_prompt:
+                        error_prompt.write(error_response)
  
                     pip_txt_path = os.path.join(current_directory, "installpip.txt")
                     install_script_path = os.path.join(current_directory, "installpip.py")
@@ -197,8 +197,8 @@ while True:
                             os.remove("_temp_prompt.txt")
                             time.sleep(0.5)
                 else:
-                    with open(prompt_file_path, 'w', encoding='utf-8') as file:
-                        file.write(error_response)
+                    with open(prompt_file_path, 'w', encoding='utf-8') as no_error:
+                        file.write("")
                         time.sleep(0.5)
                     print("****pip infomration does not exist or is empty. Not running the install script.****\n")
             else:
