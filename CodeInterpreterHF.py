@@ -20,6 +20,8 @@ pythoncode_path = os.path.join(current_directory, 'aipythonanswer.txt')
 prompt_guidance_path = os.path.join(current_directory, 'system_message.txt')
 prompt_inject_path = os.path.join(current_directory, '_temp.txt')
 
+with open(prompt_file_path, 'w', encoding='utf-8') as file:
+    file.write('')
 with open(prompt_guidance_path, 'r', encoding='utf-8') as source_file:
     content = source_file.read()
 with open(prompt_inject_path, 'a', encoding='utf-8') as target_file:
@@ -77,6 +79,7 @@ while True:
         conversation_id = chatbot.new_conversation()
         chatbot.change_conversation(conversation_id)
     else:
+        chatbot.switch_llm(2)
         response = chatbot.chat(user_input)
         print(response)
         
