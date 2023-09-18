@@ -123,6 +123,12 @@ This repository contains several files that play crucial roles in the functionin
      - Extracts and executes Python code from AI responses.
      - Manages the installation of Python packages as required.
 
+     ** edit the code llm(x) to the number correspond to the model below
+        0: `meta-llama/Llama-2-70b-chat-hf`
+        1: `OpenAssistant/oasst-sft-6-llama-30b-xor`
+        2: `codellama/CodeLlama-34b-Instruct-hf`
+        3: `tiiuae/falcon-180B-chat`
+
 2. **extractpython.py**:
    - A supporting script for extracting Python code from AI responses and updating `aipythonanswer.txt`.
    - **Functionality**:
