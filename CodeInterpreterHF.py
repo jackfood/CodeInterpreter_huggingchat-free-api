@@ -114,7 +114,7 @@ while True:
         chatbot.change_conversation(conversation_id)
     else:
         print('---------------------------------------------')
-        chatbot.switch_llm(2)
+        chatbot.switch_llm(1)
         response = chatbot.chat(user_input)
         print(response)
         
@@ -198,9 +198,8 @@ while True:
                             time.sleep(0.5)
                 else:
                     with open(prompt_file_path, 'w', encoding='utf-8') as no_error:
-                        file.write("")
-                        time.sleep(0.5)
-                    print("****pip infomration does not exist or is empty. Not running the install script.****\n")
+                        no_error.write("")
+                    print("---Code Fully Completed---\n")
             else:
                 print("-------AI Reponse is Empty-------\n")
         else:
