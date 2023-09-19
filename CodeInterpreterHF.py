@@ -180,20 +180,10 @@ while True:
                         # wait for the completion of process created by subprocess.Popen
                         process_pipinstall.wait()
 
-                        # read (installpip.txt)
-                        with open(pip_txt_path, 'r', encoding='utf-8') as aipython_file:
-                            python_script_content = aipython_file.read()
+                        with open(pip_txt_path, 'w', encoding='utf-8') as write_empty_file:
+                            python_script_content = ""
+                            write_empty_file.write(python_script_content)
 
-
-                        # Store user original prompt in (temp_original_prompt.txt)
-                        with open(user_original_prompt, 'r', encoding='utf-8') as original_prompt:
-                            post_pip_installed_prompt = original_prompt.read()
-
-                        # Write (installpip.txt & _temp_prompt.txt) into (prompt.txt)
-                        with open(prompt_file_path, 'w', encoding='utf-8') as file:
-                            file.write(f"Python Package {python_script_content} Installed. {post_pip_installed_prompt}")
-
-                            os.remove("installpip.txt")
                             os.remove("_temp_prompt.txt")
                             time.sleep(0.5)
                 else:
