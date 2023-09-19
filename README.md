@@ -44,17 +44,17 @@ To get started with the Half-CodeInterpreter, follow these steps:
 
 1. **Clone the Hugging Chat API Repository:**
 
-   First, clone the Hugging Chat API repository and install the `hugchat` library by running the following commands in your terminal:
+   First, clone the Hugging Chat API repository and install the `hugchat` library by running the following commands in your terminal and set up API:
 
    ```bash
    git clone https://github.com/Soulter/hugging-chat-api.git
    cd hugging-chat-api
-   pip install .
+   pip install hugchat
    ```
 
 2. **Clone this Repository:**
 
-   Clone this Half-CodeInterpreter repository and navigate to its directory:
+   Add in the file located in Half-CodeInterpreter repository and navigate to its directory:
 
    ```bash
    git clone https://github.com/yourusername/Half-CodeInterpreter_HFembedded.git
@@ -71,6 +71,9 @@ To get started with the Half-CodeInterpreter, follow these steps:
 
 Now your Half-CodeInterpreter is set up and ready to use. You can proceed to the "Usage" section for instructions on how to run the chatbot interface and interact with the AI chat service.
 
+   ```bash
+   python CodeInterpreterHF.py
+   ```
 
 ## Usage
 
