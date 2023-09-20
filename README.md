@@ -44,7 +44,7 @@ To get started with the Half-CodeInterpreter, follow these steps:
 
 1. **Clone the Hugging Chat API Repository:**
 
-   First, clone the Hugging Chat API repository and install the `hugchat` library by running the following commands in your terminal and set up API:
+   First, clone the [Hugging Chat API](https://github.com/Soulter/hugging-chat-api) repository and install the `hugchat` library by running the following commands in your terminal and set up API:
 
    ```bash
    git clone https://github.com/Soulter/hugging-chat-api.git
@@ -67,7 +67,7 @@ To get started with the Half-CodeInterpreter, follow these steps:
 
 4. **Configure `.env` File:**
 
-   Update the `.env` file with your Hugging Face credentials (email and password).
+   Rename example.env to .env. Open up `.env` file with your Hugging Face credentials (email and password).
 
 Now your Half-CodeInterpreter is set up and ready to use. You can proceed to the "Usage" section for instructions on how to run the chatbot interface and interact with the AI chat service.
 
